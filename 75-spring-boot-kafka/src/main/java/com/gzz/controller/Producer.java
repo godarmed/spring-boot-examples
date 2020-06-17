@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("kafka")
 public class Producer {
+
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
 
@@ -23,4 +24,5 @@ public class Producer {
 		kafkaTemplate.send("test_topic", msg);
 		return "success";
 	}
+
 }

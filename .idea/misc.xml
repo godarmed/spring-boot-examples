@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/92-springboot2-activiti6/pom.xml" />
+        <option value="$PROJECT_DIR$/75-spring-boot-kafka/pom.xml" />
       </list>
     </option>
   </component>
