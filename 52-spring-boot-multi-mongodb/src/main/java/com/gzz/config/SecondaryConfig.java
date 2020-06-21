@@ -15,7 +15,7 @@ import com.mongodb.MongoClientURI;
  * @date 2019-12-24 14:50:00
  */
 @Configuration
-@EnableMongoRepositories(basePackages = "com.gzz.dao.secondary", mongoTemplateRef = "secondaryTemplate")
+@EnableMongoRepositories(basePackages = "com.gzz.single_table.dao.secondary", mongoTemplateRef = "secondaryTemplate")
 public class SecondaryConfig {
 
 	@Bean

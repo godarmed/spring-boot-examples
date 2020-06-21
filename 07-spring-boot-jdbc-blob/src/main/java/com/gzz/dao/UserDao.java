@@ -1,4 +1,4 @@
-package com.gzz.dao;
+package com.gzz.single_table.dao;
 
 import java.sql.Types;
 import java.util.List;
@@ -10,10 +10,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.SqlLobValue;
 import org.springframework.stereotype.Repository;
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+
 @Repository
 public class UserDao {
 	protected final Log logger = LogFactory.getLog(UserDao.class);

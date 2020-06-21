@@ -15,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.gzz.DemoApplication;
-import com.gzz.dao.UserDao;
+import com.gzz.single_table.dao.UserDao;
 import com.gzz.model.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)

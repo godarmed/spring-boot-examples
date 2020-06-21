@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.gzz.DemoApplication;
-import com.gzz.dao.primary.UserDaoPrimary;
-import com.gzz.dao.secondary.UserDaoSecondary;
+import com.gzz.single_table.dao.primary.UserDaoPrimary;
+import com.gzz.single_table.dao.secondary.UserDaoSecondary;
 import com.gzz.model.User;
 import lombok.extern.slf4j.Slf4j;
 

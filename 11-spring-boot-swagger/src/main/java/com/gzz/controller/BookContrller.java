@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gzz.entity.Book;
+import com.gzz.single_table.entity.Book;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -22,10 +22,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import springfox.documentation.annotations.ApiIgnore;
 
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+
 @RestController
 @RequestMapping(value = "/books")
 @Api(tags = "枚举字典")

@@ -1,4 +1,4 @@
-package com.gzz.dao;
+package com.gzz.single_table.dao;
 
 import java.util.List;
 
@@ -9,10 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.gzz.domain.Person;
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+
 @Mapper
 public interface PersonDao {
 

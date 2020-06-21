@@ -1,4 +1,4 @@
-package com.gzz.dao;
+package com.gzz.single_table.dao;
 
 import org.apache.ibatis.annotations.Param;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.gzz.model.User;
 import com.gzz.model.UserCondition;
-import com.gzz.service.IUserService;
+import com.gzz.single_table.service.IUserService;
 /**
  * @author https://www.jianshu.com/u/3bd57d5f1074
  * @date 2019-12-24 14:50:00

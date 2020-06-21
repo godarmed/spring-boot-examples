@@ -9,11 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-import com.gzz.service.AsyncService;
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+import com.gzz.single_table.service.AsyncService;
+
 @SpringBootApplication
 @EnableAsync
 public class Application {

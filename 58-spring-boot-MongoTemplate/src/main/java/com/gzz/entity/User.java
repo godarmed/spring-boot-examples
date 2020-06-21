@@ -1,4 +1,4 @@
-package com.gzz.entity;
+package com.gzz.single_table.entity;
 
 import lombok.Builder;
 import lombok.Data;

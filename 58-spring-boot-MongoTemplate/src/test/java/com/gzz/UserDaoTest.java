@@ -5,8 +5,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.gzz.dao.UserDao;
-import com.gzz.entity.User;
+import com.gzz.single_table.dao.UserDao;
+import com.gzz.single_table.entity.User;
 import lombok.extern.slf4j.Slf4j;
 
 @RunWith(SpringRunner.class)

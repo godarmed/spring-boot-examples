@@ -1,4 +1,4 @@
-package com.gzz.dao;
+package com.gzz.single_table.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
-import com.gzz.entity.User;
+import com.gzz.single_table.entity.User;
 import com.mongodb.client.result.UpdateResult;
 /**
  * @author https://www.jianshu.com/u/3bd57d5f1074

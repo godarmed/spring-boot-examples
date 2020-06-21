@@ -1,11 +1,8 @@
-package com.gzz.entity;
+package com.gzz.single_table.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+
 @ApiModel("图书")
 public class Book {
 	@ApiModelProperty(name = "主键", dataType = "Long")

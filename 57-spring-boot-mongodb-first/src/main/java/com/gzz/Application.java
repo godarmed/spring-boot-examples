@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.gzz.dao.CustomerDao;
+import com.gzz.single_table.dao.CustomerDao;
 import com.gzz.model.Customer;
 
 import lombok.extern.slf4j.Slf4j;

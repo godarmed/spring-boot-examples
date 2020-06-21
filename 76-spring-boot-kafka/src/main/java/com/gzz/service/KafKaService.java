@@ -1,4 +1,4 @@
-package com.gzz.service;
+package com.gzz.single_table.service;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.gzz.service;
+package com.gzz.single_table.service;
 /**
  * @author https://www.jianshu.com/u/3bd57d5f1074
  * @date 2019-12-24 14:50:00
@@ -6,7 +6,7 @@ package com.gzz.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gzz.dao.UserDao;
+import com.gzz.single_table.dao.UserDao;
 import com.gzz.model.User;
 
 @Service

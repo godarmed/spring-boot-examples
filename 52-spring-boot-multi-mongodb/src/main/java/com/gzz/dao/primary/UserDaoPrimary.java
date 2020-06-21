@@ -1,4 +1,4 @@
-package com.gzz.dao.primary;
+package com.gzz.single_table.dao.primary;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

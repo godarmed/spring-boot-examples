@@ -16,10 +16,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 
 import com.google.common.base.Joiner;
 import com.gzz.common.base.BaseCondition;
-/**
- * @author https://www.jianshu.com/u/3bd57d5f1074
- * @date 2019-12-24 10:50:00
- */
+
 @Configuration
 @EnableCaching
 public class RedisConfiguration extends CachingConfigurerSupport {

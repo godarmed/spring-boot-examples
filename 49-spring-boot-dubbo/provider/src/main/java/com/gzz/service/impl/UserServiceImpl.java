@@ -1,4 +1,4 @@
-package com.gzz.service.impl;
+package com.gzz.single_table.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.gzz.model.User;
 import com.gzz.model.UserCondition;
-import com.gzz.service.IUserService;
+import com.gzz.single_table.service.IUserService;
 /**
  * @author https://www.jianshu.com/u/3bd57d5f1074
  * @date 2019-12-24 14:50:00

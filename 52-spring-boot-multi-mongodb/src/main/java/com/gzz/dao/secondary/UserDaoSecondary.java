@@ -1,4 +1,4 @@
-package com.gzz.dao.secondary;
+package com.gzz.single_table.dao.secondary;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import com.gzz.model.User;
