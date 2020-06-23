@@ -1,5 +1,6 @@
 package com.gzz.single_table.entity;
 
+import com.gzz.common.model.po.BasePO;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "single_table_jpa_user")
-public class JpaUser {
+public class JpaUser implements BasePO {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

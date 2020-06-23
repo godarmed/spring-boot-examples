@@ -11,8 +11,7 @@ import java.io.Serializable;
  * @Created by Zzy
  */
 
-@ApiModel(value = "通用持久化模型")
-public class BasePO implements Serializable {
+@ApiModel(value = "通用持久化模型接口")
+public interface BasePO{
 
-    private static final long serialVersionUID = 1L;
 }

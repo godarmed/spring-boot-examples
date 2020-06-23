@@ -22,7 +22,10 @@ public class SortField implements Serializable {
     @ApiModelProperty(value = "需排序字段")
     private String fieldName;
 
+    @ApiModelProperty(value = "字段别名", notes = "传入值不为null时，作为表字段处理", required = false)
+    private String aliasName;
+
     @ApiModelProperty(value = "排序方式",example = "1-正序，2-倒序")
-    private int direction;
+    private Integer direction;
 
 }

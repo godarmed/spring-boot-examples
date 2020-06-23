@@ -1,6 +1,10 @@
+server:
+  port: 5001
+  servlet:
+    context-path: /JpaCrudService
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://47.101.136.249:18765/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: zzy123456
@@ -11,3 +15,15 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         hbm2ddl: 
           auto: update
+
+
+logging:
+  level:
+    org.springframework.security:
+      - debug
+      - info
+    org.springframework.web: error
+    org.hibernate.SQL: debug
+    org.hibernate.engine.QueryParameters: debug
+    org.hibernate.engine.query.HQLQueryPlan: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace

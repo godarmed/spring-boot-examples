@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,10 +24,10 @@ public class BaseQueryDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "排序字段集合")
-    private List<SortField> sortFieldList;
+    private List<SortField> sortFieldList = new ArrayList<>();
 
     @ApiModelProperty(value = "关联其他表的字段集合")
-    private List<JoinField> joinFieldList;
+    private List<JoinField> joinFieldList = new ArrayList<>();
 
     @ApiModelProperty(value = "分页页数")
     private Integer page;
