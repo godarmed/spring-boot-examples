@@ -25,12 +25,11 @@ public class FieldConditionUtil {
      */
     public static List<Predicate> addCondition(ConditionDTO conditionDTO, List<Predicate> predicates){
         //别名确定
-        String key = conditionDTO.getFieldName();
+        String fieldName = conditionDTO.getFieldName();
         if(!StringUtils.isEmpty(conditionDTO.getAliasName())){
-            key = conditionDTO.getAliasName();
+            fieldName = conditionDTO.getAliasName();
         }
         //字段类型确定
-        String fieldName = conditionDTO.getFieldName();
         Class<?> fieldType = conditionDTO.getFieldType();
         Object fieldValue = conditionDTO.getFieldValue();
         From<?, ?> root = conditionDTO.getRoot();

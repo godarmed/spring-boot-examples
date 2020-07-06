@@ -67,6 +67,13 @@ public class ResourcesPredicate<PO extends BasePO, Q extends BaseQueryDTO> imple
         return null;
     }
 
+    /**
+     * 排序规则组装
+     * @param root
+     * @param builder
+     * @param <J>
+     * @return
+     */
     private <J extends BasePO> List<Order> generateSort(Root<PO> root, CriteriaBuilder builder) {
         List<Order> orders = new ArrayList<>();
         Map<String, JoinField> JoinFieldMap = request.getJoinFieldList().stream().
@@ -107,6 +114,13 @@ public class ResourcesPredicate<PO extends BasePO, Q extends BaseQueryDTO> imple
         return orders;
     }
 
+    /**
+     * 一般条件组装
+     * @param root
+     * @param builder
+     * @throws IllegalArgumentException
+     * @throws IllegalAccessException
+     */
     private void resourceSearch(From<?, ?> root, CriteriaBuilder builder) throws IllegalArgumentException, IllegalAccessException {
         List<ReflexEntity> enties = ReflexUtils.reflex2EntityAndSuperClass(request);
         if (enties != null && enties.size() > 0) {
@@ -134,6 +148,13 @@ public class ResourcesPredicate<PO extends BasePO, Q extends BaseQueryDTO> imple
         }
     }
 
+    /**
+     * 连表查询条件组装
+     * @param root
+     * @param builder
+     * @param joinField
+     * @param <J>
+     */
     private <J extends BasePO> void resourceSearchParent(From<?, ?> root, CriteriaBuilder builder, JoinField joinField) {
         //映射表的实际字段
         String fieldName = joinField.getFieldName();
@@ -154,6 +175,17 @@ public class ResourcesPredicate<PO extends BasePO, Q extends BaseQueryDTO> imple
                 break;
             default:
         }
+    }
+
+    /**
+     * 特殊条件组装
+     * @param root
+     * @param query
+     * @param builder
+     * @param predicates
+     */
+    private void extraSearch(From<?, ?> root, CriteriaQuery<?> query, CriteriaBuilder builder, List<Predicate> predicates){
+
     }
 }
 
