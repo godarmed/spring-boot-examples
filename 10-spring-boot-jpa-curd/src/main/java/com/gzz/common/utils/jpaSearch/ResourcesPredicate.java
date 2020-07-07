@@ -7,6 +7,7 @@ import com.gzz.common.model.po.BasePO;
 import com.gzz.common.utils.reflex.ReflexEntity;
 import com.gzz.common.utils.reflex.ReflexUtils;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.util.StringUtils;
 
 import javax.persistence.criteria.*;
 import java.sql.Timestamp;
@@ -83,13 +84,18 @@ public class ResourcesPredicate<PO extends BasePO, Q extends BaseQueryDTO> imple
                 Order order = null;
                 if (JoinFieldMap.containsKey(item.getFieldName())) {
                     JoinField joinField = JoinFieldMap.get(item.getFieldName());
+                    //别名确定
+                    String fieldName = joinField.getFieldName();
+                    if(!StringUtils.isEmpty(joinField.getAliasName())){
+                        fieldName = joinField.getAliasName();
+                    }
                     switch(joinField.getJoinType()){
                         case 0: //一对一
                             Join<PO, J> join = root.join(joinField.getTableName(), JoinType.LEFT);
                             if (item.getDirection() == 1) {      //升序
-                                order = builder.asc(join.get(item.getFieldName()));
+                                order = builder.asc(join.get(fieldName));
                             } else {                         //降序
-                                order = builder.desc(join.get(item.getFieldName()));
+                                order = builder.desc(join.get(fieldName));
                             }
                             break;
                         case 1: //一对多

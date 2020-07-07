@@ -112,23 +112,35 @@ public class DictServiceImpl implements DictService {
     public Page<DictItem> findDictItemByPage(DictItemQueryDTO request) {
         generateDictItemQuery(request);
         Pageable pageable = PageRequest.of(request.getPage(), request.getSize(), Sort.by(Sort.Direction.DESC,"id"));
-        return dictGroupDAO.findAll(new ResourcesPredicate<DictGroup, DictGroupQueryDTO>(request), pageable);
+        return dictItemDAO.findAll(new ResourcesPredicate<DictItem, DictItemQueryDTO>(request), pageable);
     }
 
     private void generateDictItemQuery(DictItemQueryDTO request) {
         List<JoinField> joinFields = new ArrayList<>();
         HashMap<String, JoinField> entityHashMap = new HashMap<>();
-        entityHashMap.put("dictItemkey", new JoinField() {
+        entityHashMap.put("dictGroupId", new JoinField() {
             {
-                setFieldName("dictItemkey");
-                setAliasName("key");
-                setTableName("dictItems");
-                setFieldValue(request.getDictItemkey());
+                setFieldName("dictGroupId");
+                setAliasName("id");
+                setTableName("dictGroup");
+                setFieldValue(request.getDictGroupId());
+                setFieldType(Long.class);
+            }
+        });
+        entityHashMap.put("dictCnName", new JoinField() {
+            {
+                setFieldName("dictCnName");
+                setAliasName("cnName");
+                setTableName("dictGroup");
+                setFieldValue(request.getDictCnName());
                 setFieldType(String.class);
             }
         });
-        if (!StringUtils.isEmpty(request.getDictItemkey())) {
-            joinFields.add(entityHashMap.get("dictItemkey"));
+        if (request.getDictGroupId() != null) {
+            joinFields.add(entityHashMap.get("dictGroupId"));
+        }
+        if (!StringUtils.isEmpty(request.getDictCnName())) {
+            joinFields.add(entityHashMap.get("dictCnName"));
         }
         request.setJoinFieldList(joinFields);
     }

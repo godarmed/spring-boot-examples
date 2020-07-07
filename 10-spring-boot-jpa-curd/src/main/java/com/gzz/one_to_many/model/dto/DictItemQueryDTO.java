@@ -2,6 +2,7 @@ package com.gzz.one_to_many.model.dto;
 
 import com.gzz.common.model.dto.BaseQueryDTO;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * @Classname DictItemQueryDTO
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @Date 2020/7/6 18:14
  * @Created by Zzy
  */
+@Data
 public class DictItemQueryDTO extends BaseQueryDTO {
 
     private static final long serialVersionUID = 8050660443876463036L;
