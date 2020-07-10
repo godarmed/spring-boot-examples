@@ -1,0 +1,16 @@
+package com.zzy.jpaCrud.common.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.NoRepositoryBean;
+
+/**
+ * @Classname Repository
+ * @Description TODO
+ * @Date 2020/6/21 9:24
+ * @Created by Zzy
+ */
+
+@NoRepositoryBean
+public interface BaseRepository<T, ID> extends JpaRepository<T, ID>, JpaSpecificationExecutor<T> {
+}

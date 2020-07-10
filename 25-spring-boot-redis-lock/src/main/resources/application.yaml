@@ -1,0 +1,33 @@
+server:
+  port: 5002
+  servlet:
+    context-path: /redisLockService
+spring:
+  redis:
+#    cluster:
+#      nodes: 192.168.1.91:7001,192.168.1.91:7002,192.168.1.91:7003,192.168.1.91:7004,192.168.1.91:7005,192.168.1.91:7006
+    # Redis数据库索引
+    database: 0
+    # Redis服务器地址
+    host: localhost
+    # Redis服务器端口
+    port: 6379
+    # Redis服务器连接密码
+    #password:
+    # 连接池配置
+    lettuce:
+      pool:
+        # 连接池最大连接数 默认 8
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1ms
+        max-wait: -1ms
+        # 连接池中最大空闲连接 默认 0
+        max-idle: 0
+        # 连接池中最小空闲连接 默认 0
+        min-idle: 0
+    # 连接超时时间
+    timeout: 3000
+logging:
+  level:
+    com.zzy.redis.lock.jedis.controller: trace
+

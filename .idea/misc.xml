@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/92-springboot2-activiti6/pom.xml" />
         <option value="$PROJECT_DIR$/75-spring-boot-kafka/pom.xml" />
         <option value="$PROJECT_DIR$/10-spring-boot-jpa-curd/pom.xml" />
+        <option value="$PROJECT_DIR$/25-spring-boot-redis-lock/pom.xml" />
       </list>
     </option>
   </component>
