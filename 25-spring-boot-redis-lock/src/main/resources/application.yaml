@@ -4,8 +4,6 @@ server:
     context-path: /redisLockService
 spring:
   redis:
-#    cluster:
-#      nodes: 192.168.1.91:7001,192.168.1.91:7002,192.168.1.91:7003,192.168.1.91:7004,192.168.1.91:7005,192.168.1.91:7006
     # Redis数据库索引
     database: 0
     # Redis服务器地址
@@ -30,4 +28,36 @@ spring:
 logging:
   level:
     com.zzy.redis.lock.jedis.controller: trace
+
+custom:
+  redis:
+    cluster:
+      failed-attempts: 3
+      master-connection-pool-size: 64
+      nodes: ''
+      read-mode: SLAVE
+      retry-attempts: 3
+      retry-interval: 1500
+      scan-interval: 1000
+      slave-connection-pool-size: 64
+    database: 0
+    mode: single
+    #password: ''
+    pool:
+      conn-timeout: 3000
+      max-active: 8
+      max-idle: 16
+      max-wait: 3000
+      min-idle: 8
+      size: 10
+      so-timeout: 3000
+    sentinel:
+      fail-max: 3
+      master: business-master
+      master-onlyWrite: true
+      nodes: ''
+    single:
+      address: localhost:6379
+    timeout: 3000
+
 

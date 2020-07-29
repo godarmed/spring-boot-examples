@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/testm1592186310333" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1592186310333" name="" targetNamespace="http://www.activiti.org/testm1592186310333" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="leaveBill" isClosed="false" isExecutable="true" processType="None">
+    <startEvent id="_2" name="StartEvent"/>
+    <userTask activiti:assignee="Zzy" activiti:exclusive="true" id="_apply" name="申请请假"/>
+    <sequenceFlow id="_4" sourceRef="_2" targetRef="_apply"/>
+    <userTask activiti:assignee="组长" activiti:exclusive="true" id="_audit_1" name="审批（组长）"/>
+    <sequenceFlow id="_6" sourceRef="_apply" targetRef="_audit_1"/>
+    <userTask activiti:assignee="组长" activiti:exclusive="true" id="_Audit_2" name="审批（老板）"/>
+    <sequenceFlow id="_8" sourceRef="_audit_1" targetRef="_Audit_2"/>
+    <endEvent id="_9" name="EndEvent"/>
+    <sequenceFlow id="_10" sourceRef="_Audit_2" targetRef="_9"/>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#FFFFFF;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="leaveBill">
+      <bpmndi:BPMNShape bpmnElement="_2" id="Shape-_2">
+        <dc:Bounds height="32.0" width="32.0" x="615.0" y="120.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_apply" id="Shape-_apply">
+        <dc:Bounds height="55.0" width="85.0" x="590.0" y="220.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_audit_1" id="Shape-_audit_1">
+        <dc:Bounds height="55.0" width="85.0" x="590.0" y="360.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_Audit_2" id="Shape-_Audit_2">
+        <dc:Bounds height="55.0" width="85.0" x="590.0" y="490.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" id="Shape-_9">
+        <dc:Bounds height="32.0" width="32.0" x="620.0" y="610.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4" id="BPMNEdge__4" sourceElement="_2" targetElement="_apply">
+        <di:waypoint x="631.0" y="152.0"/>
+        <di:waypoint x="631.0" y="220.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6" id="BPMNEdge__6" sourceElement="_apply" targetElement="_audit_1">
+        <di:waypoint x="632.5" y="275.0"/>
+        <di:waypoint x="632.5" y="360.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="_audit_1" targetElement="_Audit_2">
+        <di:waypoint x="632.5" y="415.0"/>
+        <di:waypoint x="632.5" y="490.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10" sourceElement="_Audit_2" targetElement="_9">
+        <di:waypoint x="636.0" y="545.0"/>
+        <di:waypoint x="636.0" y="610.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
