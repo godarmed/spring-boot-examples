@@ -1,4 +1,4 @@
-package com.zzy.redis.lock.common.config;
+package com.zzy.redis.lock.jedis.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

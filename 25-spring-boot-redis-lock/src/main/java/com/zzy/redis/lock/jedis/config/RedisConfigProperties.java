@@ -1,4 +1,4 @@
-package com.zzy.redis.lock.common.config;
+package com.zzy.redis.lock.jedis.config;
 
 import lombok.Data;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;

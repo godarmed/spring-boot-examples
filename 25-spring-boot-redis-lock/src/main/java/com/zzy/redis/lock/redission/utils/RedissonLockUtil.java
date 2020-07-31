@@ -1,6 +1,6 @@
 package com.zzy.redis.lock.redission.utils;
 
-import com.zzy.redis.lock.jedis.util.SpringUtils;
+import com.zzy.redis.lock.common.util.SpringUtils;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 
@@ -24,7 +24,9 @@ public class RedissonLockUtil {
     }
 
     public RedissonLockUtil() {
-        this.client = (RedissonClient) SpringUtils.getBean("CustomRedissonClient");
+        if(this.client == null){
+            this.client = (RedissonClient) SpringUtils.getBean("CustomRedissonClient");
+        }
     }
 
     public RLock lock(String lockKey) {

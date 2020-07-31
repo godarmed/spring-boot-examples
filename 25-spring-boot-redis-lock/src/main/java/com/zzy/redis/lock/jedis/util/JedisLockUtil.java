@@ -1,7 +1,8 @@
 package com.zzy.redis.lock.jedis.util;
 
-import com.zzy.redis.lock.common.config.RedisConfig;
-import com.zzy.redis.lock.common.config.RedisConfigProperties;
+import com.zzy.redis.lock.common.util.SpringUtils;
+import com.zzy.redis.lock.jedis.config.RedisConfig;
+import com.zzy.redis.lock.jedis.config.RedisConfigProperties;
 import redis.clients.jedis.Jedis;
 
 import java.util.Collections;
@@ -12,7 +13,7 @@ import java.util.Collections;
  * @Date 2020/7/10 11:58
  * @Created by Zzy
  */
-public class JedisLockUtil {
+public class JedisLockUtil implements AutoCloseable {
 
     private static final String LOCK_SUCCESS = "OK";
     private static final String SET_IF_NOT_EXIST = "NX";
@@ -23,7 +24,7 @@ public class JedisLockUtil {
     private RedisConfigProperties properties;
 
     public JedisLockUtil() throws Exception {
-        this.redisConfig = (RedisConfig)SpringUtils.getBean(RedisConfig.class);
+        this.redisConfig = (RedisConfig) SpringUtils.getBean(RedisConfig.class);
         if (this.redisConfig != null) {
             this.properties = this.redisConfig.getRedisConfigProperties();
             this.jedis = this.redisConfig.redisPoolFactory().getResource();
@@ -93,6 +94,13 @@ public class JedisLockUtil {
         }
         return false;
 
+    }
+
+    @Override
+    public void close() throws Exception {
+        if (this.jedis != null) {
+            this.jedis.close();
+        }
     }
 }
 

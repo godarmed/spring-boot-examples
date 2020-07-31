@@ -1,4 +1,4 @@
-package com.zzy.redis.lock.jedis.util;
+package com.zzy.redis.lock.common.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

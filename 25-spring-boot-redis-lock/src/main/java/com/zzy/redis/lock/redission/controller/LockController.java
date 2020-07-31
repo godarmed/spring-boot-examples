@@ -1,6 +1,6 @@
 package com.zzy.redis.lock.redission.controller;
 
-import com.zzy.redis.lock.jedis.util.SpringUtils;
+import com.zzy.redis.lock.common.util.SpringUtils;
 import com.zzy.redis.lock.redission.utils.RedissonLockUtil;
 import lombok.extern.log4j.Log4j2;
 import org.redisson.api.RLock;
@@ -24,21 +24,22 @@ public class LockController {
     @RequestMapping("/testLock")
     public void testLock(int threadNum){
         for (int i = 0; i < threadNum; i++) {
-            SpringUtils.getBean(com.zzy.redis.lock.jedis.controller.JedisLockController.class).getLock();
+            SpringUtils.getBean(com.zzy.redis.lock.redission.controller.LockController.class).getLock();
         }
     }
 
-    @Async("asyncServiceExecutor")
+    @Async
     public void getLock(){
         RedissonLockUtil redissonLockUtil = null;
         String lockName = "OAUTH2_TOKEN_ZZYZZY";
         String requestId = String.valueOf(Thread.currentThread().getId());
-        int expireTime = 60;
+        long expireTime = 5;
         boolean isGetLock = false;
         RLock rLock = null;
         try {
             redissonLockUtil = new RedissonLockUtil();
-            if ((rLock = redissonLockUtil.lock(lockName)) != null) {
+            log.info("线程:name:[{}],id:[{}]开始获取锁",Thread.currentThread().getName(),Thread.currentThread().getId());
+            if ((rLock = redissonLockUtil.lock(lockName, expireTime)) != null) {
                 log.info("线程:name:[{}],id:[{}]成功获取到锁",Thread.currentThread().getName(),Thread.currentThread().getId());
                 log.info("线程:name:[{}],id:[{}]开始执行业务代码",Thread.currentThread().getName(),Thread.currentThread().getId());
                 TimeUnit.SECONDS.sleep(10);
@@ -60,6 +61,5 @@ public class LockController {
                 e.printStackTrace();
             }
         }
-
     }
 }
