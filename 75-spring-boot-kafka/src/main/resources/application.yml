@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: 47.101.136.249:7030
 #    producer:
 #      key-serializer: org.apache.kafka.common.serialization.StringSerializer
 #      value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -12,3 +12,7 @@ spring:
       auto-commit-interval: 1000
 #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+#logging:
+#  config: classpath:log4j2.yml   # 配置log4j2读取的配置文件
+#  file: ../springlogs/kafkaservice.log

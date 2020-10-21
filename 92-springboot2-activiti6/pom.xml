@@ -18,7 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>8</java.version>
-		<activiti-dependencies.version>5.22.0</activiti-dependencies.version>
+		<activiti-dependencies.version>6.0.0</activiti-dependencies.version>
 	</properties>
 	<dependencies>
 
@@ -82,7 +82,7 @@
 							<!--jar包不包含唯一版本标识-->
 							<useUniqueVersions>false</useUniqueVersions>
 							<!--指定入口类-->
-							<mainClass>org.activiti.examples.DemoApplication</mainClass>
+							<mainClass>com.zzy.activiti.DemoApplication</mainClass>
 						</manifest>
 						<manifestEntries>
 							<!--MANIFEST.MF 中 Class-Path 加入资源文件目录-->

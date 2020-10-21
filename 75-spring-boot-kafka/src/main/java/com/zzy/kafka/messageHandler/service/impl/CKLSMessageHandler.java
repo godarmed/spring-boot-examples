@@ -1,7 +1,7 @@
 package com.zzy.kafka.messageHandler.service.impl;
 
-import com.gzz.messageHandler.model.Constants;
-import com.gzz.messageHandler.service.AbstractMessageHandler;
+import com.zzy.kafka.messageHandler.model.Constants;
+import com.zzy.kafka.messageHandler.service.AbstractMessageHandler;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
