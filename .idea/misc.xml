@@ -7,8 +7,9 @@
         <option value="$PROJECT_DIR$/75-spring-boot-kafka/pom.xml" />
         <option value="$PROJECT_DIR$/10-spring-boot-jpa-curd/pom.xml" />
         <option value="$PROJECT_DIR$/25-spring-boot-redis-lock/pom.xml" />
+        <option value="$PROJECT_DIR$/01-spring-boot-helloWorld/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="9.0" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

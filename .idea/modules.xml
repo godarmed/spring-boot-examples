@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-spring-boot-helloWorld/01-spring-boot-helloWorld.iml" filepath="$PROJECT_DIR$/01-spring-boot-helloWorld/01-spring-boot-helloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/10-spring-boot-jpa-curd/10-spring-boot-jpa-curd.iml" filepath="$PROJECT_DIR$/10-spring-boot-jpa-curd/10-spring-boot-jpa-curd.iml" />
       <module fileurl="file://$PROJECT_DIR$/25-spring-boot-redis-lock/25-spring-boot-redis-lock.iml" filepath="$PROJECT_DIR$/25-spring-boot-redis-lock/25-spring-boot-redis-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/75-spring-boot-kafka/75-spring-boot-kafka.iml" filepath="$PROJECT_DIR$/75-spring-boot-kafka/75-spring-boot-kafka.iml" />

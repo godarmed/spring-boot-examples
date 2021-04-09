@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="01-spring-boot-helloWorld" />
         <module name="10-spring-boot-jpa-curd" />
         <module name="25-spring-boot-redis-lock" />
         <module name="75-spring-boot-kafka" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="01-spring-boot-helloWorld" target="1.8" />
       <module name="10-spring-boot-jpa-curd" target="1.8" />
       <module name="25-spring-boot-redis-lock" target="1.8" />
       <module name="75-spring-boot-kafka" target="1.8" />
